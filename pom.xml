@@ -52,13 +52,13 @@
             <dependency>
                 <groupId>com.ruyi</groupId>
                 <artifactId>mallchat-common-starter</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.abin.mallchat</groupId>
-                <artifactId>mallchat-transaction</artifactId>
                 <version>${version}</version>
             </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.ruyi.mallchat</groupId>-->
+            <!--                <artifactId>mallchat-transaction</artifactId>-->
+            <!--                <version>${version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>
