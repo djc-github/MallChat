@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class WSBaseResp<T> {
     /**
-     * ws推送给前端的消息
+     * ws推送给前端的消息类型
      *
      * @see WSRespTypeEnum
      */

@@ -1,6 +1,5 @@
 package com.ruyi.mallchat.common.websocket.domain.vo.response;
 
-import com.ruyi.mallchat.common.websocket.domain.enums.ChatActiveStatusEnum;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

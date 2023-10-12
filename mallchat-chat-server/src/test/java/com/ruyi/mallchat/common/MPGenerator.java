@@ -15,6 +15,7 @@ import java.util.List;
 
 public class MPGenerator {
     public static void main(String[] args) {
+        System.out.println("============" + System.getProperty("user.dir"));
         //代码生成器
         AutoGenerator autoGenerator = new AutoGenerator();
 

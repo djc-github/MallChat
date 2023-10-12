@@ -28,7 +28,7 @@ public class WSMemberChange {
     @ApiModelProperty("变动类型 1加入群组 2移除群组")
     private Integer changeType;
     /**
-     * @see com.abin.mallchat.common.user.domain.enums.ChatActiveStatusEnum
+     * @see com.ruyi.mallchat.common.user.domain.enums.ChatActiveStatusEnum
      */
     @ApiModelProperty("在线状态 1在线 2离线")
     private Integer activeStatus;

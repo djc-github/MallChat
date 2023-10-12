@@ -16,10 +16,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class WSLoginSuccess {
+    /**
+     * 用户id
+     */
     private Long uid;
+    /**
+     * 用户头像
+     */
     private String avatar;
+    /**
+     * access_token
+     */
     private String token;
+    /**
+     * 用户名字
+     */
     private String name;
-    //用户权限 0普通用户 1超管
+    /**
+     * 用户权限 0普通用户 1超管
+     */
     private Integer power;
 }

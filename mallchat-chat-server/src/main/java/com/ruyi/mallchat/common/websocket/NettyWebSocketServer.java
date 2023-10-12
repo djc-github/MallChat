@@ -1,5 +1,7 @@
 package com.ruyi.mallchat.common.websocket;
 
+import com.ruyi.mallchat.common.websocket.handler.HeadersCollectHandler;
+import com.ruyi.mallchat.common.websocket.handler.NettyWebSocketServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -23,6 +25,9 @@ import org.springframework.context.annotation.Configuration;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+/**
+ * NettyWebSocket服务器
+ */
 @Slf4j
 @Configuration
 public class NettyWebSocketServer {
@@ -55,7 +60,7 @@ public class NettyWebSocketServer {
         Future<?> future1 = workerGroup.shutdownGracefully();
         future.syncUninterruptibly();
         future1.syncUninterruptibly();
-        log.info("关闭 ws server 成功");
+        log.info("关闭 websocket server 成功");
     }
 
     public void run() throws InterruptedException {
@@ -82,8 +87,8 @@ public class NettyWebSocketServer {
                          *  2. 这就是为什么当浏览器发送大量数据时，就会发出多次 http请求的原因
                          */
                         pipeline.addLast(new HttpObjectAggregator(8192));
-                        //保存用户ip
-                        pipeline.addLast(new HttpHeadersHandler());
+                        //自定义的http header和请求参数获取器，保存用户ip、token等信息
+                        pipeline.addLast(new HeadersCollectHandler());
                         /**
                          * 说明：
                          *  1. 对于 WebSocket，它的数据是以帧frame 的形式传递的；
@@ -93,6 +98,7 @@ public class NettyWebSocketServer {
                          *      是通过一个状态码 101 来切换的
                          */
                         pipeline.addLast(new WebSocketServerProtocolHandler("/"));
+//                        pipeline.addLast(new MyHandshakeHandler());//重写握手处理器！！！不建议！！！
                         // 自定义handler ，处理业务逻辑
                         pipeline.addLast(NETTY_WEB_SOCKET_SERVER_HANDLER);
                     }

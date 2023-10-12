@@ -16,10 +16,10 @@
             <groupId>com.ruyi</groupId>
             <artifactId>mallchat-common-starter</artifactId>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>com.ruyi</groupId>-->
-        <!--            <artifactId>mallchat-transaction</artifactId>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>com.ruyi</groupId>
+            <artifactId>mallchat-transaction</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.knuddels</groupId>
             <artifactId>jtokkit</artifactId>
@@ -29,6 +29,11 @@
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
             <version>3.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-mp</artifactId>
+            <version>${weixin-java-mp.version}</version>
         </dependency>
     </dependencies>
 
@@ -42,6 +47,21 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <classpathScope>test</classpathScope>
+                </configuration>
             </plugin>
         </plugins>
     </build>
