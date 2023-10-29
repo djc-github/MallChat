@@ -1,7 +1,7 @@
 package com.ruyi.mallchat.common;
 
-import com.ruyi.mallchat.common.common.utils.JwtUtils;
-import com.ruyi.mallchat.common.user.service.LoginService;
+import com.ruyi.mallchat.common.utils.JwtUtils;
+import com.ruyi.mallchat.user.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;

@@ -21,6 +21,14 @@
             <artifactId>mallchat-transaction</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.ruyi</groupId>
+            <artifactId>mallchat-oss-starter</artifactId>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.ruyi</groupId>-->
+        <!--            <artifactId>mallchat-redis</artifactId>-->
+        <!--        </dependency>-->
+        <dependency>
             <groupId>com.knuddels</groupId>
             <artifactId>jtokkit</artifactId>
             <version>0.6.1</version>
@@ -48,21 +56,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <classpathScope>test</classpathScope>
-                </configuration>
-            </plugin>
         </plugins>
+
     </build>
 </project>

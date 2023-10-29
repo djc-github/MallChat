@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ruyi.mallchat.common.sensitive.mapper.SensitiveWordMapper">
+<mapper namespace="com.ruyi.mallchat.common1.sensitive.mapper.SensitiveWordMapper">
 
-    <resultMap id="BaseResultMap" type="com.ruyi.mallchat.common.sensitive.domain.SensitiveWord">
+    <resultMap id="BaseResultMap" type="com.ruyi.mallchat.sensitive.domain.SensitiveWord">
         <result property="word" column="word" jdbcType="VARCHAR"/>
     </resultMap>
 
